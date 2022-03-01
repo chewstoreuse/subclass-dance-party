@@ -3,7 +3,8 @@ body, html{
 }
 body{
   margin: 0px;
-  background-color:#444;
+  background: url("img/dancefloor.jpeg") no-repeat center center fixed;
+  background-size: cover;
   font-size: 18px;
 }
 body, a:link, a:visited, a:active{
@@ -13,6 +14,10 @@ body, a:link, a:visited, a:active{
   padding:5px 12px;
   float:right;
 }
+/* .title, .addShrinkyDancerButton{
+  padding:5px 12px;
+  float:right;
+} */
 .topbar{
   height:32px;
   background-color: #555;
@@ -20,8 +25,32 @@ body, a:link, a:visited, a:active{
 .title{
   background-color: #777;
 }
-.dancer{
+.spongebob{
+  position:absolute;
+}
+.spongebob img{
+  width: 200px;
+  height: auto;
+}
+.shrinkyDancer{
   border:10px solid red;
   border-radius:10px;
   position:absolute;
+}
+@keyframes shrink {
+  from {
+    transform: scale(4);
+  }
+  to {
+    transform: scale(1);
+  }
+}
+
+@keyframes grow {
+  from {
+    transform: scale(1);
+  }
+  to {
+    transform: scale(4);
+  }
 }
