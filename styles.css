@@ -53,3 +53,32 @@ body, a:link, a:visited, a:active{
     transform: scale(1);
   }
 }
+.slidingDancer{
+  animation-duration: 2s;
+  animation-name: right;
+  position: absolute;
+}
+.slidingDancer img{
+  width: 200px;
+  height: auto;
+}
+@keyframes right {
+  from {
+    margin-left: 100%;
+    width: 300%;
+  }
+  to {
+    margin-left: 0%;
+    width: 100%;
+  }
+}
+@keyframes left {
+  from {
+    margin-left: 0%;
+    width: 100%;
+  }
+  to {
+    margin-left: 100%;
+    width: 300%;
+  }
+}

@@ -20,6 +20,10 @@ makeDancer.prototype.shrink = function () {
   setTimeout(this.shrink.bind(this), this.timeBetweenSteps);
 };
 
+makeDancer.prototype.slide = function () {
+  setTimeout(this.slide.bind(this), this.timeBetweenSteps);
+};
+
 makeDancer.prototype.setPosition = function (top, left) {
   // Use css top and left properties to position our <span> tag
   // where it belongs on the page. See http://api.jquery.com/css/

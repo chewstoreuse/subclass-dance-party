@@ -25,10 +25,12 @@ $(document).ready(function () {
     // make a dancer with a random position
 
     var dancer = new dancerMakerFunction(
-      $("body").height() * Math.random(),
-      $("body").width() * Math.random(),
+      $('body').height() * Math.random(),
+      $('body').width() * Math.random(),
       Math.random() * 1000
     );
+
+    console.log($('body').height(), $('body').width());
 
     $('body').append(dancer.$node);
     // window.dancers.push(dancer.$node);
@@ -43,13 +45,28 @@ $(document).ready(function () {
     console.log(dancerMakerFunction);
 
     var dancer = new dancerMakerFunction(
-      $("body").height() * Math.random(),
-      $("body").width() * Math.random(),
+      $('body').height() * Math.random(),
+      $('body').width() * Math.random(),
       Math.random() * 1000
     );
 
-    console.log(dancer.$node);
     $('body').append(dancer.$node);
   });
 });
 
+$('#sliding-btn').on('click', function (event) {
+
+  var dancerMakerFunctionName = $(this).data('dancer-maker-function-name');
+  console.log(dancerMakerFunctionName);
+
+  var dancerMakerFunction = window[dancerMakerFunctionName];
+  console.log(dancerMakerFunction);
+
+  var dancer = new dancerMakerFunction(
+    $('body').height() * Math.random(),
+    $('body').width() * Math.random(),
+    Math.random() * 1000
+  );
+
+  $('body').append(dancer.$node);
+});
