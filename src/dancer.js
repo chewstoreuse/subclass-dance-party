@@ -16,9 +16,9 @@ makeDancer.prototype.step = function () {
   setTimeout(this.step.bind(this), this.timeBetweenSteps);
 };
 
-// makeDancer.prototype.shrink = function () {
-//   setTimeout(this.shrink.bind(this), this.timeBetweenSteps);
-// };
+makeDancer.prototype.shrink = function () {
+  setTimeout(this.shrink.bind(this), this.timeBetweenSteps);
+};
 
 makeDancer.prototype.setPosition = function (top, left) {
   // Use css top and left properties to position our <span> tag

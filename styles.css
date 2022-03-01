@@ -14,10 +14,6 @@ body, a:link, a:visited, a:active{
   padding:5px 12px;
   float:right;
 }
-/* .title, .addShrinkyDancerButton{
-  padding:5px 12px;
-  float:right;
-} */
 .topbar{
   height:32px;
   background-color: #555;
@@ -33,24 +29,27 @@ body, a:link, a:visited, a:active{
   height: auto;
 }
 .shrinkyDancer{
-  border:10px solid red;
-  border-radius:10px;
+  animation-duration: 2s;
+  animation-name: grow;
   position:absolute;
+}
+.shrinkyDancer img{
+  width: 200px;
+  height: auto;
 }
 @keyframes shrink {
   from {
-    transform: scale(4);
+    transform: scale(1);
   }
   to {
-    transform: scale(1);
+    transform: scale(0.25);
   }
 }
-
 @keyframes grow {
   from {
-    transform: scale(1);
+    transform: scale(0.25);
   }
   to {
-    transform: scale(4);
+    transform: scale(1);
   }
 }
